@@ -8,8 +8,12 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Exemplo de rota
 app.get('/', (req, res) => {
-  res.send('Olá, mundo!');
+  res.render('Olá, mundo!');
 });
+
+app.get('/contact', (req, res) => {
+    res.render('contact.ejs')
+})
 
 // Rota para o frontend
 app.get('/app', (req, res) => {
